@@ -7,9 +7,9 @@ const router = Router()
 
 router.post('/',validate(CreateUserDTO), createUser)
 router.get('/', findAllUsers)
+router.get('/telefone/:telefone', findUserByTelefone)
 router.get('/:id', findUserById)
 router.delete('/:telefone', deleteUser)
 router.patch('/:telefone', validate(UpdateUserDTO), updateUser)
-router.get('/:telefone', findUserByTelefone)
 
 export default router

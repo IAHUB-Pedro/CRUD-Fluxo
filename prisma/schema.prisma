@@ -1,0 +1,15 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgres"
+  url      = env("DATABASE_URL")
+}
+
+model users {
+  id       Int      @id @default(autoincrement())
+  nome     String   @db.VarChar(100)
+  telefone String?  @unique(map: "unique_telefone")
+  status   Boolean? @default(true)
+}

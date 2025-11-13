@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 3000
 
 const allowedOrigins = [
     'http://localhost:3000',       // Origem usada no ambiente local
+    'https://fluxo.personalbrainia.com/',
     'https://denguefatec.vercel.app', // Origem usada no ambiente de produção
 ];
 

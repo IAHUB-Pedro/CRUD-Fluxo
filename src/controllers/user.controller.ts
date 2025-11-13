@@ -6,7 +6,11 @@ export const createUser = async (req: Request, res: Response) => {
         const user = await createUserService(req.body)
         return res.status(201).json(user)
     } catch (error) {
-        return res.status(400).json({error})
+        console.error('Erro no createUser:', error)
+        return res.status(400).json({
+            error: error instanceof Error ? error.message : 'Erro desconhecido',
+            details: error
+        })
     }
 }
 

@@ -23,6 +23,10 @@ export const findUserByIdService = async (id: number) => {
     return await findUserById(id)
 }
 
+export const findUserByTelefoneService = async (telefone: string) => {
+    return await findUserByTelefone(telefone)
+}
+
 export const deleteUserService = async (telefone: string, body: any) => {
     const user = await findUserByTelefone(telefone)
 

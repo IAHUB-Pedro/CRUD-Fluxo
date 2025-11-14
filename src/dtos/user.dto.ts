@@ -26,6 +26,5 @@ export class UpdateUserDTO {
     telefone!:string
 
     @IsOptional()
-    @MinLength(5)
     status?:boolean
 }
